@@ -1,0 +1,16 @@
+{
+  "name": "Mandi 24x7",
+  "short_name": "Mandi 24x7",
+  "description": "Compare mandi fruit & vegetable rates in Roorkee and order for tomorrow.",
+  "lang": "en-IN",
+  "icons": [
+    { "src": "/assets/icons/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icons/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icons/maskable-icon-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/assets/icons/maskable-icon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "theme_color": "#0E6B32",
+  "background_color": "#FBF5EA",
+  "display": "standalone",
+  "start_url": "/"
+}
