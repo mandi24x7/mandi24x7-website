@@ -18,11 +18,11 @@ const STATE         = 'Uttarakhand';
 
 // ---- Legal details (shown on Privacy, Terms and Contact) ------------------
 // Leave a value empty ('') and the page shows a highlighted [placeholder] instead.
-const BUSINESS_NAME     = '';   // registered business name, e.g. 'Mandi 24x7 Services Pvt Ltd'
-const BUSINESS_ADDRESS  = '';   // full business address
-const GRIEVANCE_OFFICER = '';   // grievance officer's full name
-const SUPPORT_PHONE     = '';   // support phone / WhatsApp, e.g. '+91 98xxx xxxxx'
-const COURT_CITY        = '';   // court jurisdiction city in the Terms: 'Haridwar' or 'Roorkee'
+const BUSINESS_NAME     = 'Mandi 24x7';   // registered business name, e.g. 'Mandi 24x7 Services Pvt Ltd'
+const BUSINESS_ADDRESS  = 'Roorkee, District Haridwar, Uttarakhand 247667';   // full business address
+const GRIEVANCE_OFFICER = 'Mandi 24x7 Support Team';   // grievance officer's full name
+const SUPPORT_PHONE     = '';   // support phone / WhatsApp, e.g. '+91 98xxx xxxxx' (empty = the phone section is hidden)
+const COURT_CITY        = 'Roorkee';   // court jurisdiction city in the Terms: 'Haridwar' or 'Roorkee'
 
 date_default_timezone_set('Asia/Kolkata');
 

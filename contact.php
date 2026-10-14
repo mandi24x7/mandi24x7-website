@@ -14,8 +14,10 @@ require __DIR__ . '/includes/header.php';
   <h2>Email</h2>
   <p><a href="mailto:mandirke24x7@gmail.com">mandirke24x7@gmail.com</a>. We reply within 1 working day.</p>
 
+<?php if (SUPPORT_PHONE !== ''): ?>
   <h2>Phone / WhatsApp</h2>
-  <p><?= SUPPORT_PHONE !== '' ? '<a href="tel:' . e(preg_replace('/[^+0-9]/', '', SUPPORT_PHONE)) . '">' . e(SUPPORT_PHONE) . '</a>' : fill('', 'support number') ?>, 9 AM to 7 PM, Monday to Saturday</p>
+  <p><a href="tel:<?= e(preg_replace('/[^+0-9]/', '', SUPPORT_PHONE)) ?>"><?= e(SUPPORT_PHONE) ?></a>, 9 AM to 7 PM, Monday to Saturday</p>
+<?php endif; ?>
 
   <h2>Want to sell on Mandi 24x7?</h2>
   <p>Vendors from Roorkee mandi can open a shop from the app (<em>Profile → Open a shop</em>). We call you to verify your
