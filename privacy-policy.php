@@ -9,11 +9,10 @@ require __DIR__ . '/includes/header.php';
 <div class="legal">
 <article>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 9 October 2026</p>
+  <p class="updated">Last updated: 5 November 2026</p>
 
   <p>Mandi 24x7 (“we”, “us”) runs the Mandi 24x7 mobile app and website, a marketplace where buyers compare the daily
-  fruit and vegetable rates of vendors in their city, order for next-day delivery or pickup, and keep a khata (ledger)
-  with each vendor. This policy explains what personal data we collect, why, and the choices you have. It is written to
+  fruit and vegetable rates of vendors in their city, and order for next-day delivery or pickup. This policy explains what personal data we collect, why, and the choices you have. It is written to
   meet the Digital Personal Data Protection Act, 2023 and the Information Technology Act, 2000 of India.</p>
 
   <p>The service is operated by <?= fill(BUSINESS_NAME, 'registered business name') ?>, <?= fill(BUSINESS_ADDRESS, 'business address') ?>, India.</p>
@@ -26,8 +25,8 @@ require __DIR__ . '/includes/header.php';
     <tr><td>City</td><td>To show you only the vendors and rates of your city.</td></tr>
     <tr><td>Delivery address</td><td>Given to the vendor of a home-delivery order so they can deliver it.</td></tr>
     <tr><td>Orders</td><td>Items, quantities, prices, charges and status, so vendors can fulfil orders and both sides have a record.</td></tr>
-    <tr><td>Khata (ledger) and payments</td><td>Amounts owed and payments recorded by the vendor (cash, UPI or bank, with an optional reference), so buyer and vendor share one clear account.</td></tr>
-    <tr><td>Vendor shop details</td><td>For vendors only: shop name, owner name, market, address, FSSAI number, GSTIN and UPI ID, used to verify the shop and shown to buyers where needed (for example the UPI ID for payments).</td></tr>
+    <tr><td>Older ledger records</td><td>Amounts and payments a vendor recorded in the khata (ledger), which the app no longer offers. Kept only as described in section 4.</td></tr>
+    <tr><td>Vendor shop details</td><td>For vendors only: shop name, owner name, market, address, FSSAI number, GSTIN and UPI ID, used to verify the shop and to settle commission. Buyers see the shop name and market.</td></tr>
     <tr><td>Device notification token</td><td>To send you order and payment alerts. You can turn notifications off in your phone settings.</td></tr>
     <tr><td>Technical logs</td><td>IP address, app version and error logs, kept briefly to keep the service secure and working.</td></tr>
   </table>
@@ -38,8 +37,8 @@ require __DIR__ . '/includes/header.php';
 
   <h2>2. How we use your data</h2>
   <ul>
-    <li>To run the marketplace: log in, show rates, place and fulfil orders, keep the khata.</li>
-    <li>To send service messages: OTPs, order updates, payment receipts and reminders.</li>
+    <li>To run the marketplace: log in, show rates, place and fulfil orders.</li>
+    <li>To send service messages: OTPs, order updates and reminders.</li>
     <li>To support you and resolve disputes between buyers and vendors.</li>
     <li>To keep the service safe, prevent fraud and meet our legal obligations.</li>
     <li>To understand usage in aggregate (for example the number of orders per day) and improve the service.</li>
@@ -47,8 +46,8 @@ require __DIR__ . '/includes/header.php';
 
   <h2>3. Who we share it with</h2>
   <ul>
-    <li><strong>Vendors you order from</strong> see your name, mobile number, delivery address, orders and khata with them.</li>
-    <li><strong>Buyers</strong> see a vendor’s shop name, market, rates and UPI ID.</li>
+    <li><strong>Vendors you order from</strong> see your name, mobile number, delivery address and orders with them.</li>
+    <li><strong>Buyers</strong> see a vendor’s shop name, market and rates.</li>
     <li><strong>Service providers</strong> who process data for us: our cloud server host in India, an SMS provider
       for OTPs, and push-notification services (Expo, Google Firebase Cloud Messaging and Apple Push Notification service).</li>
     <li><strong>Authorities</strong>, when the law requires it.</li>
@@ -58,7 +57,7 @@ require __DIR__ . '/includes/header.php';
   <h2>4. How long we keep it</h2>
   <p>We keep your account data while your account is active. When you delete your account (see
   <a href="/delete-account">Delete account</a>), we erase your name, mobile number, addresses, vendor documents,
-  notification tokens and alerts. Order and khata records are kept without your name or number, for up to 8 years, because
+  notification tokens and alerts. Order and older ledger records are kept without your name or number, for up to 8 years, because
   the other party and Indian tax and accounting laws need them. Technical logs are deleted within 90 days.</p>
 
   <h2>5. Security</h2>

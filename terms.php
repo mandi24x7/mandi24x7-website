@@ -9,7 +9,7 @@ require __DIR__ . '/includes/header.php';
 <div class="legal">
 <article>
   <h1>Terms of Use</h1>
-  <p class="updated">Last updated: 9 October 2026</p>
+  <p class="updated">Last updated: 5 November 2026</p>
 
   <p>These terms apply when you use the Mandi 24x7 app or website (the “service”), operated by
   <?= fill(BUSINESS_NAME, 'registered business name') ?> (“we”, “us”). By creating an account you agree to them.</p>
@@ -17,8 +17,7 @@ require __DIR__ . '/includes/header.php';
   <h2>1. What Mandi 24x7 is</h2>
   <p>Mandi 24x7 is a marketplace. Independent vendors publish their own daily fruit and vegetable rates; buyers compare
   them and order from the vendor they choose. <strong>The vendor sells the goods</strong>, sets the price, and is
-  responsible for their quality, weight, packing and delivery or pickup. We provide the app, the order system and the
-  khata (ledger) tool.</p>
+  responsible for their quality, weight, packing and delivery or pickup. We provide the app and the order system.</p>
 
   <h2>2. Accounts</h2>
   <ul>
@@ -38,12 +37,10 @@ require __DIR__ . '/includes/header.php';
     <li>A vendor may accept or reject an order. You can cancel an order in the app until the cutoff time for its delivery date.</li>
   </ul>
 
-  <h2>4. Payments and khata</h2>
+  <h2>4. Payments</h2>
   <ul>
-    <li>You pay the vendor directly (cash, UPI or bank transfer). Mandi 24x7 does not collect or hold your money.</li>
-    <li>When an order is delivered, its amount is added to your khata with that vendor. The vendor records the payments you make.</li>
-    <li>The khata is a record-keeping tool between you and the vendor. Any credit (udhaar) is given by the vendor, not by
-      Mandi 24x7. Please pay your dues to the vendor on time.</li>
+    <li>You pay the vendor directly in cash when your order is delivered or when you pick it up (cash on delivery). Mandi 24x7 does not collect or hold your money.</li>
+    <li>Mandi 24x7 does not offer credit (udhaar) through the app.</li>
   </ul>
 
   <h2>5. Vendors</h2>
@@ -61,7 +58,7 @@ require __DIR__ . '/includes/header.php';
   <h2>7. Our responsibility</h2>
   <p>We work to keep the service running and the information accurate, but it is provided “as is”. Disputes about the
   quality, quantity or price of goods are between the buyer and the vendor; we will help both sides using the order
-  and khata records. To the extent the law allows, our liability for any claim is limited to the commission we earned on
+  records. To the extent the law allows, our liability for any claim is limited to the commission we earned on
   the order concerned.</p>
 
   <h2>8. Ending your account</h2>

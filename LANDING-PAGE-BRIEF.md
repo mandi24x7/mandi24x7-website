@@ -43,18 +43,18 @@ The app and the Play Store link to them, so never rename them:
 2. **Order tonight**: pick your shop and order before the cutoff (10 PM).
 3. **Fresh tomorrow**: home delivery or pickup; pay by actual weight.
 
-**For buyers**: lowest-price sorting · Hindi & English voice search · order from many shops at once · pay only for the weighed quantity · khata with every vendor · live order updates
+**For buyers**: lowest-price sorting · Hindi & English voice search · order from many shops at once · pay only for the weighed quantity · cash on delivery · live order updates
 
-**For vendors**: publish rates in minutes (copy yesterday's) · new-order chime · packing list for the mandi · weigh & bill automatically · customer khata with UPI/cash records · low commission (from 1.5%, launch offer available) → button **Open your shop** (opens the app / Play Store)
+**For vendors**: publish rates in minutes (copy yesterday's) · new-order chime · packing list for the mandi · weigh & bill automatically · cash on delivery, paid straight to you · low commission (from 1.5%, launch offer available) → button **Open your shop** (opens the app / Play Store)
 
 **Trust strip**: Starting in **Roorkee, Uttarakhand** · Local mandi vendors · Prices set by vendors, not by us · Your data is never sold
 
-**Screenshots**: carousel of 4–5 app screens (rates, product compare, cart, orders, khata)
+**Screenshots**: carousel of 4–5 app screens (rates, product compare, cart, orders)
 
 **FAQ**
 - *Is there a delivery charge?* Shown in the cart before you order; set per city, free above a set amount.
 - *Why can my bill change?* Produce is sold by weight; you pay for what the vendor actually weighs.
-- *How do I pay?* Directly to the vendor by cash or UPI; it's recorded in your khata.
+- *How do I pay?* Cash on delivery: you pay the vendor when your order reaches you or when you pick it up.
 - *Which cities?* Roorkee now, more soon.
 - *How do I become a vendor?* Install the app → Profile → Open a shop; we verify within a day.
 - *How do I delete my account?* In the app, or see /delete-account.

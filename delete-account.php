@@ -35,7 +35,7 @@ require __DIR__ . '/includes/header.php';
 
   <h2>What is kept, and for how long</h2>
   <div class="note">
-    Past orders and khata (ledger) entries stay with the other party (the vendor or buyer) <strong>without your name or
+    Past orders and older ledger entries stay with the other party (the vendor or buyer) <strong>without your name or
     number</strong>, for up to 8 years, because they need them for their accounts and Indian tax and accounting laws
     require these records. Nothing else is kept.
   </div>

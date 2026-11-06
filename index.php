@@ -14,7 +14,7 @@ $faqs = [
     ['Why can my bill change?',
      'Produce is sold by weight; you pay for what the vendor actually weighs.'],
     ['How do I pay?',
-     'Directly to the vendor by cash or UPI; it’s recorded in your khata.'],
+     'Cash on delivery: you pay the vendor when your order reaches you or when you pick it up.'],
     ['Which cities?',
      'Roorkee now, more soon.'],
     ['How do I become a vendor?',
@@ -133,7 +133,7 @@ require __DIR__ . '/includes/header.php';
       <li class="card feat"><?= icon('mic') ?><div><h3>Hindi &amp; English voice search</h3><p>Just say “tamatar” or “tomato”.</p></div></li>
       <li class="card feat"><?= icon('shops') ?><div><h3>Order from many shops at once</h3><p>Sabzi from one, fruit from another, in one go.</p></div></li>
       <li class="card feat"><?= icon('weight') ?><div><h3>Pay only for the weighed quantity</h3><p>Your bill follows what the vendor actually weighs.</p></div></li>
-      <li class="card feat"><?= icon('khata') ?><div><h3>Khata with every vendor</h3><p>Orders and payments, one clear account per shop.</p></div></li>
+      <li class="card feat"><?= icon('wallet') ?><div><h3>Cash on delivery</h3><p>Pay the vendor when your order reaches you.</p></div></li>
       <li class="card feat"><?= icon('bell') ?><div><h3>Live order updates</h3><p>Know when it is accepted, packed and on the way.</p></div></li>
     </ul>
   </div>
@@ -152,7 +152,7 @@ require __DIR__ . '/includes/header.php';
         <li><?= icon('chime') ?><span><b>New-order chime</b></span></li>
         <li><?= icon('list') ?><span><b>Packing list</b> for the mandi</span></li>
         <li><?= icon('receipt') ?><span><b>Weigh &amp; bill</b> automatically</span></li>
-        <li><?= icon('wallet') ?><span><b>Customer khata</b> with UPI/cash records</span></li>
+        <li><?= icon('wallet') ?><span><b>Cash on delivery</b>, paid straight to you</span></li>
         <li><?= icon('percent') ?><span><b>Low commission</b> (from 1.5%, launch offer available)</span></li>
       </ul>
       <p class="cta-row">
@@ -194,7 +194,7 @@ require __DIR__ . '/includes/header.php';
     <header class="sec-head sec-head-row">
       <div>
         <p class="kicker">Inside the app</p>
-        <h2>Mandi rates, fruit prices in Roorkee and your khata, in one app</h2>
+        <h2>Mandi rates and fruit prices in Roorkee, in one app</h2>
       </div>
       <div class="car-btns">
         <button type="button" class="car-btn" data-dir="-1" aria-controls="shots" aria-label="Previous screen"><?= icon('left') ?></button>
@@ -208,7 +208,6 @@ require __DIR__ . '/includes/header.php';
           ['compare', 'Compare a product', 'One item across every shop'],
           ['cart',    'Cart',              'Many shops, one order'],
           ['orders',  'Orders',            'Live status till your door'],
-          ['khata',   'Khata',             'Every order and payment, per shop'],
       ];
       foreach ($shots as [$key, $name, $cap]): ?>
         <li class="slide">
