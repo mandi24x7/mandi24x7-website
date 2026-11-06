@@ -41,6 +41,7 @@ require __DIR__ . '/includes/header.php';
   <ul>
     <li>You pay the vendor directly in cash when your order is delivered or when you pick it up (cash on delivery). Mandi 24x7 does not collect or hold your money.</li>
     <li>Mandi 24x7 does not offer credit (udhaar) through the app.</li>
+    <li>Where a cashback reward is offered, it is a promotional reward funded by Mandi 24x7 and given after an order is delivered. It can only be used against later orders in the app and expires on the date shown in the app. It has no cash value: it cannot be bought or topped up, withdrawn, exchanged for cash or transferred to anyone. Unused rewards end if you delete your account. Mandi 24x7 may change or end the offer at any time; orders already placed keep the reward promised when they were placed.</li>
   </ul>
 
   <h2>5. Vendors</h2>
@@ -48,6 +49,7 @@ require __DIR__ . '/includes/header.php';
     <li>Vendors must keep their rates and stock honest, hold the licences their business needs, and follow food-safety and weights-and-measures laws.</li>
     <li>Mandi 24x7 charges vendors a commission (and applicable GST) on delivered orders, at the rate shown in the vendor
       app. Vendors settle it with us weekly or monthly.</li>
+    <li>When a customer uses a cashback reward, the vendor collects that much less cash and Mandi 24x7 covers the amount: it is set off against the commission due, and we pay the vendor any amount above that.</li>
     <li>We may verify, suspend or remove a shop that breaks these terms or gets repeated genuine complaints.</li>
   </ul>
 
