@@ -14,7 +14,7 @@ $faqs = [
     ['Why can my bill change?',
      'Produce is sold by weight; you pay for what the vendor actually weighs.'],
     ['How do I pay?',
-     'Cash on delivery: you pay the vendor when your order reaches you or when you pick it up.'],
+     'You pay the vendor when your order reaches you or when you pick it up: in cash, or by UPI if the shop shows a QR code.'],
     ['Which cities?',
      'Roorkee now, more soon.'],
     ['How do I become a vendor?',

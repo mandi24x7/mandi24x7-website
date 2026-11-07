@@ -9,7 +9,7 @@ require __DIR__ . '/includes/header.php';
 <div class="legal">
 <article>
   <h1>Terms of Use</h1>
-  <p class="updated">Last updated: 5 November 2026</p>
+  <p class="updated">Last updated: 7 November 2026</p>
 
   <p>These terms apply when you use the Mandi 24x7 app or website (the “service”), operated by
   <?= fill(BUSINESS_NAME, 'registered business name') ?> (“we”, “us”). By creating an account you agree to them.</p>
@@ -47,7 +47,7 @@ require __DIR__ . '/includes/header.php';
 
   <h2>4. Payments</h2>
   <ul>
-    <li>You pay the vendor directly in cash when your order is delivered or when you pick it up (cash on delivery). Mandi 24x7 does not collect or hold your money.</li>
+    <li>You pay the vendor directly when your order is delivered or when you pick it up: in cash, or by UPI if the vendor shows a QR code. The payment goes straight to the vendor. Mandi 24x7 does not collect or hold your money, and cannot confirm or reverse a UPI payment.</li>
     <li>Mandi 24x7 does not offer credit (udhaar) through the app.</li>
     <li>Where a cashback reward is offered, it is a promotional reward funded by Mandi 24x7 and given after an order is delivered. It can only be used against later orders in the app and expires on the date shown in the app. It has no cash value: it cannot be bought or topped up, withdrawn, exchanged for cash or transferred to anyone. Unused rewards end if you delete your account. Mandi 24x7 may change or end the offer at any time; orders already placed keep the reward promised when they were placed.</li>
   </ul>
