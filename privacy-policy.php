@@ -51,7 +51,7 @@ require __DIR__ . '/includes/header.php';
     <li><strong>Vendors you order from</strong> see your name, mobile number, delivery address and map pin, and your orders with them. They also see a count of how many of your orders on Mandi 24x7 were delivered and not delivered, which helps them avoid false orders.</li>
     <li><strong>Buyers</strong> see a vendor’s shop name, market and rates.</li>
     <li><strong>Service providers</strong> who process data for us: our cloud server host in India, an SMS provider
-      for OTPs, and push-notification services (Expo, Google Firebase Cloud Messaging and Apple Push Notification service). When you open a map, your phone loads it from OpenFreeMap and the map code from unpkg, which receive your IP address and the map area shown; they do not receive your name, number or address.</li>
+      for OTPs, and push-notification services (Expo, Google Firebase Cloud Messaging and Apple Push Notification service). When you open a map, your phone loads it from OpenFreeMap and the map code from unpkg, and from Esri if you switch to satellite view; they receive your IP address and the map area shown; they do not receive your name, number or address.</li>
     <li><strong>Authorities</strong>, when the law requires it.</li>
   </ul>
   <p>We never sell your personal data.</p>
