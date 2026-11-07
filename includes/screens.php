@@ -56,12 +56,37 @@ function screen_rates(bool $lazy): string
     $h .= '<div class="s-search">' . icon('search') . '<span>Search “tamatar”, “pyaz”…</span>' . icon('mic', 'ico s-mic') . '</div>';
     $h .= '<div class="s-tabs"><span class="on">Sabzi</span><span>Fruits</span><span class="s-sort">' . icon('sort') . 'Lowest</span></div>';
     $h .= '<ul class="s-list">';
-    foreach (['tomato', 'onion', 'potato', 'cauliflower', 'ladyfinger', 'chilli', 'spinach'] as $k) {
+    foreach (['potato', 'spinach', 'tomato', 'cauliflower', 'onion', 'ladyfinger', 'chilli'] as $i => $k) {
         [$en, $hi, $price, $shops] = PRODUCTS[$k];
-        $h .= '<li>' . thumb($k, $lazy) . '<span class="s-name">' . $en . '<small>' . $hi . ' · ' . $shops . ' shops</small></span>'
+        $h .= '<li' . ($i === 0 ? ' class="best"' : '') . '>' . thumb($k, $lazy) . '<span class="s-name">' . $en . '<small>' . $hi . ' · ' . $shops . ' shops</small></span>'
             . '<span class="s-price"><small class="s-from">from</small>₹' . $price . '<small>/kg</small></span></li>';
     }
     return $h . '</ul><div class="s-cut">' . icon('clock') . 'Order by 10 PM tonight</div>';
+}
+
+/** The "how to order" walkthrough on the home page: site.js moves through these scenes and taps. */
+function screen_demo(bool $lazy): string
+{
+    $row = fn(string $k, string $add) => '<li>' . thumb($k, $lazy) . '<span class="s-name">' . PRODUCTS[$k][0] . '<small>' . PRODUCTS[$k][1] . ' · ' . PRODUCTS[$k][3] . ' shops</small></span>'
+        . '<span class="s-price">₹' . PRODUCTS[$k][2] . '<small>/kg</small></span><span class="s-add ' . $add . '">+</span></li>';
+    $h = '<div class="demo-stage" data-scene="rates">';
+    $h .= '<div class="scene scene-rates">' . appbar('Tomorrow’s rates', 'Roorkee · ' . tomorrow())
+        . '<ul class="s-list demo-list">' . $row('potato', 'add-a') . $row('tomato', 'add-b') . $row('onion', '') . $row('ladyfinger', '') . '</ul>'
+        . '<div class="s-btn demo-bar">View cart (<span class="demo-count">0</span>)</div></div>';
+    $h .= '<div class="scene scene-cart">' . appbar('Your cart', 'Ram Sabzi Wale · ' . tomorrow())
+        . '<ul class="s-list demo-list">'
+        . '<li>' . thumb('potato', $lazy) . '<span class="s-name">Potato<small>1 kg</small></span><span class="s-price">₹18</span></li>'
+        . '<li>' . thumb('tomato', $lazy) . '<span class="s-name">Tomato<small>2 kg</small></span><span class="s-price">₹56</span></li></ul>'
+        . '<div class="s-sum"><p><span>Estimated items</span><span>₹74</span></p><p class="s-note">' . icon('weight') . 'Final bill by actual weight</p></div>'
+        . '<div class="s-btn demo-place">Place order · ₹74</div></div>';
+    $h .= '<div class="scene scene-placed"><div class="demo-done"><span class="demo-check">' . icon('check') . '</span><b>Order placed</b><small>MND-482917</small><small>Arrives ' . tomorrow() . '</small></div></div>';
+    $steps = [['Placed', '8:42 PM'], ['Accepted by shop', '8:55 PM'], ['Weighed & packed', '6:10 AM'], ['Delivered', '7:40 AM']];
+    $h .= '<div class="scene scene-track">' . appbar('Order MND-482917', 'Ram Sabzi Wale') . '<ol class="s-steps demo-steps">';
+    foreach ($steps as [$t, $time]) {
+        $h .= '<li><b>' . $t . '</b><small>' . $time . '</small></li>';
+    }
+    $h .= '</ol><div class="s-sum demo-code"><p><span>Delivery code</span><b>4821</b></p><p class="s-note">' . icon('check') . 'Share it when your order arrives</p></div></div>';
+    return $h . '<span class="demo-tap"></span></div>';
 }
 
 function screen_compare(bool $lazy): string
@@ -101,7 +126,7 @@ function screen_cart(bool $lazy): string
 
 function screen_orders(bool $lazy): string
 {
-    $h = appbar('Order #2417', 'Ram Sabzi Wale · ' . tomorrow());
+    $h = appbar('Order MND-482917', 'Ram Sabzi Wale · ' . tomorrow());
     $steps = [['Placed', '8:42 PM', 'done'], ['Accepted by vendor', '8:55 PM', 'done'], ['Weighed & packed', '6:10 AM', 'done'],
               ['Out for delivery', '7:30 AM', 'now'], ['Delivered', '', '']];
     $h .= '<ol class="s-steps">';

@@ -59,7 +59,7 @@ $cssVersion  = @filemtime(__DIR__ . '/../style.css') ?: 1;
   <div class="wrap bar">
     <a class="brand" href="/" aria-label="Mandi 24x7 home">
       <picture>
-        <source srcset="/assets/img/logo-header-dark.webp" media="(prefers-color-scheme: dark)">
+        <source srcset="/assets/img/logo-header-dark.webp"<?= ($bodyClass ?? '') === 'home' ? '' : ' media="(prefers-color-scheme: dark)"' ?>>
         <img src="/assets/img/logo-header-light.webp" width="160" height="48" alt="Mandi 24x7">
       </picture>
     </a>

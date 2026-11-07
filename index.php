@@ -53,13 +53,32 @@ $ld[] = [
 ];
 $headExtra = '  <script type="application/ld+json">' . json_encode($ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) . '</script>' . "\n";
 
+// Hidden-until-scrolled styles apply only with this class, so the page still shows if the script never loads.
+$headExtra .= '  <script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches){var h=document.documentElement;h.classList.add("anim");setTimeout(function(){if(!window.mandiMotion)h.classList.remove("anim")},2500)}</script>' . "\n";
+
 $footExtra = '<script src="/assets/site.js?v=' . (@filemtime(__DIR__ . '/assets/site.js') ?: 1) . '" defer></script>';
+
+/** The string of lights from the app's login: a wire with three swags and a bulb every so often. */
+function lights(): string
+{
+    $h = '<div class="lights" aria-hidden="true"><svg viewBox="0 0 100 60" preserveAspectRatio="none"><path d="M0 6 Q16.67 74 33.33 6 Q50 74 66.67 6 Q83.33 74 100 6"/></svg>';
+    foreach ([0, 1, 2] as $swag) {
+        foreach ([.12, .3, .5, .7, .88] as $i => $t) {
+            $x = ($swag + $t) * 100 / 3;
+            $y = (1 - $t) ** 2 * 6 + 2 * $t * (1 - $t) * 74 + $t ** 2 * 6;
+            $h .= '<span class="bulb" style="left:' . round($x, 2) . '%;top:' . round($y * 100 / 60, 2) . '%;--tw:' . (($swag * 5 + $i * 3) % 7) . '"></span>';
+        }
+    }
+    return $h . '</div>';
+}
 
 require __DIR__ . '/includes/header.php';
 ?>
 
 <!-- ============ Hero ============ -->
 <section class="hero">
+  <?= lights() ?>
+  <div class="heap-wrap" aria-hidden="true"><img class="heap" src="/assets/img/heap.webp" width="1170" height="720" alt="" decoding="async"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="eyebrow"><?= icon('pin') ?>Sabzi mandi Roorkee · aaj ka bhav</p>
@@ -74,16 +93,21 @@ require __DIR__ . '/includes/header.php';
     </div>
 
     <div class="hero-art">
-      <span class="ring r1" aria-hidden="true"></span>
-      <span class="ring r2" aria-hidden="true"></span>
       <?= phone('rates', 'The Mandi 24x7 app showing tomorrow’s vegetable rates in Roorkee, sorted by lowest price', false, 'phone-hero') ?>
-      <img class="bubble b1" src="/assets/img/p/tomato-lg.webp" width="160" height="160" alt="" fetchpriority="low">
-      <img class="bubble b2" src="/assets/img/p/apple-lg.webp" width="160" height="160" alt="" fetchpriority="low">
-      <img class="bubble b3" src="/assets/img/p/chilli-lg.webp" width="160" height="160" alt="" fetchpriority="low">
-      <img class="bubble b4" src="/assets/img/p/onion-lg.webp" width="160" height="160" alt="" fetchpriority="low">
+      <p class="rate-tag" aria-hidden="true"><?= thumb('potato', false) ?><span>Potato<b>₹18/kg</b><small>lowest of 5 shops</small></span></p>
+      <p class="sample-note">Sample rates</p>
     </div>
   </div>
 </section>
+
+<!-- ============ Produce ribbon ============ -->
+<div class="ribbon" aria-hidden="true">
+  <div class="ribbon-track">
+    <?php foreach ([1, 2] as $copy): foreach (PRODUCTS as $key => [$en, $hi]): ?>
+      <span class="ribbon-item"><?= thumb($key, false) ?><span><?= e($en) ?><small lang="hi"><?= e($hi) ?></small></span></span>
+    <?php endforeach; endforeach; ?>
+  </div>
+</div>
 
 <!-- ============ How it works ============ -->
 <section id="how" class="section">
@@ -92,6 +116,7 @@ require __DIR__ . '/includes/header.php';
       <p class="kicker">How it works</p>
       <h2>Check the mandi rate tonight, get it fresh tomorrow</h2>
     </header>
+    <div class="how-grid">
     <ol class="steps-grid">
       <li class="card step">
         <span class="step-ico"><?= icon('compare') ?></span>
@@ -112,6 +137,34 @@ require __DIR__ . '/includes/header.php';
         <p>Home delivery or pickup; pay by actual weight.</p>
       </li>
     </ol>
+    <div class="demo-art">
+      <?= phone('demo', 'A short walkthrough of the app: add vegetables, place the order, and follow it until it is delivered', true, 'phone-demo') ?>
+      <p class="fine center">Sample rates and order shown.</p>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Fresh produce ============ -->
+<section id="fresh" class="section fresh">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">From your local mandi</p>
+      <h2>Fruit and vegetables, weighed and packed for your order</h2>
+    </header>
+    <ul class="fresh-grid">
+      <?php
+      $fresh = [['tomato', 'Tomato', 'टमाटर'], ['broccoli', 'Broccoli', 'ब्रोकली'], ['mango', 'Mango', 'आम'], ['cauliflower', 'Cauliflower', 'फूलगोभी'],
+                ['pomegranate', 'Pomegranate', 'अनार'], ['carrot', 'Carrot', 'गाजर'], ['capsicum', 'Capsicum', 'शिमला मिर्च'], ['grapes', 'Grapes', 'अंगूर'],
+                ['spinach', 'Spinach', 'पालक'], ['orange', 'Orange', 'संतरा'], ['brinjal', 'Brinjal', 'बैंगन'], ['watermelon', 'Watermelon', 'तरबूज']];
+      foreach ($fresh as $i => [$key, $en, $hi]): ?>
+        <li class="fresh-tile" style="--i:<?= $i ?>;--r:<?= $i % 2 ? 3 : -3 ?>deg">
+          <span class="fresh-pic"><img src="/assets/img/fresh/<?= $key ?>.webp" width="360" height="360" alt="<?= e($en) ?>" loading="lazy" decoding="async"></span>
+          <b><?= e($en) ?></b><small lang="hi"><?= e($hi) ?></small>
+        </li>
+      <?php endforeach; ?>
+    </ul>
+    <p class="fine">Sample photos. What you get depends on the shop you order from.</p>
   </div>
 </section>
 
@@ -156,7 +209,7 @@ require __DIR__ . '/includes/header.php';
 
     <div class="vendor-card card" aria-label="Example vendor packing list" role="img">
       <div aria-hidden="true">
-        <div class="toast"><?= icon('chime') ?><span><b>New order #2418</b><small>3 items · delivery</small></span></div>
+        <div class="toast"><?= icon('chime') ?><span><b>New order MND-418263</b><small>3 items · delivery</small></span></div>
         <p class="vc-title">Packing list · <?= e(tomorrow()) ?></p>
         <ul class="vc-list">
           <li><?= thumb('tomato', true) ?><span>Tomato<small>9 orders</small></span><b>42 kg</b></li>
