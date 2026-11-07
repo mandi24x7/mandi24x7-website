@@ -35,6 +35,14 @@ require __DIR__ . '/includes/header.php';
       the vendor may supply less or none of it, and you are not charged for what you do not receive.</li>
     <li>Delivery charges and other charges (for example a rain or small-order fee) are shown in the cart before you order.</li>
     <li>A vendor may accept or reject an order. You can cancel an order in the app until the cutoff time for its delivery date.</li>
+    <li>Each order shows a 4-digit delivery code in the app. Give it to the vendor only after you have your order. It records that the order reached you.</li>
+  </ul>
+
+  <h2>3A. Checking items, returns and problems</h2>
+  <ul>
+    <li>Please check your items when you get them, before you pay. If an item is bad or short, hand it back right there and the vendor removes it from your bill.</li>
+    <li>Because fresh produce spoils quickly, items are not picked up for return after you have accepted them.</li>
+    <li>If something is wrong after that, or you did not get your order, use “Report a problem” on the order in the app within 24 hours, with a photo if you can. The vendor and Mandi 24x7 will see it. The vendor replaces the items or refunds you directly. Nothing in these terms takes away your rights under consumer law.</li>
   </ul>
 
   <h2>4. Payments</h2>
@@ -56,6 +64,7 @@ require __DIR__ . '/includes/header.php';
   <h2>6. Acceptable use</h2>
   <p>Do not misuse the service: no false orders, fake rates, abuse of other users, attempts to break or overload the
   service, or use for anything unlawful.</p>
+  <p>To protect vendors from false orders, new customers have an order limit until their first delivery. If a vendor reports that an order could not be handed over (for example you were not home or you refused it), that counts against your account for 30 days. Repeated cases can limit you to pickup from the shop, and we may block an account that keeps doing this. If a report is wrong, use “Report a problem” within 24 hours and we will review it.</p>
 
   <h2>7. Our responsibility</h2>
   <p>We work to keep the service running and the information accurate, but it is provided “as is”. Disputes about the

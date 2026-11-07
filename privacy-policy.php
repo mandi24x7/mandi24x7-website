@@ -24,6 +24,8 @@ require __DIR__ . '/includes/header.php';
     <tr><td>Name (optional)</td><td>Shown to the vendors you order from, so they know who the order is for.</td></tr>
     <tr><td>City</td><td>To show you only the vendors and rates of your city.</td></tr>
     <tr><td>Delivery address</td><td>Given to the vendor of a home-delivery order so they can deliver it.</td></tr>
+    <tr><td>Location</td><td>Only if you choose: the spot you set on the map for a delivery address, or your shop’s location and delivery area. If you tap “Use my location”, your phone’s position is used once to place the pin. We do not track you. A pin on an order is given to that order’s vendor so they can find you.</td></tr>
+    <tr><td>Problem reports</td><td>What you write when you report a problem with an order and any photo you choose to add, seen by that vendor and by us so the problem can be settled.</td></tr>
     <tr><td>Orders</td><td>Items, quantities, prices, charges and status, so vendors can fulfil orders and both sides have a record.</td></tr>
     <tr><td>Older ledger records</td><td>Amounts and payments a vendor recorded in the khata (ledger), which the app no longer offers. Kept only as described in section 4.</td></tr>
     <tr><td>Vendor shop details</td><td>For vendors only: shop name, owner name, market, address, FSSAI number, GSTIN and UPI ID, used to verify the shop and to settle commission. Buyers see the shop name and market.</td></tr>
@@ -33,7 +35,7 @@ require __DIR__ . '/includes/header.php';
   <p><strong>Voice search:</strong> when you tap the microphone, your phone’s own speech service (for example Google
   speech services on Android, or Apple speech recognition on iPhone) turns your words into text. Only the resulting text
   is used to search products. We do not record or store your voice.</p>
-  <p>We do <strong>not</strong> collect your location (GPS), contacts, photos or files, and we do not show advertising.</p>
+  <p>We do <strong>not</strong> track your location in the background or collect your contacts, and we only get a photo if you choose one for a problem report. We do not show advertising.</p>
 
   <h2>2. How we use your data</h2>
   <ul>
@@ -46,17 +48,17 @@ require __DIR__ . '/includes/header.php';
 
   <h2>3. Who we share it with</h2>
   <ul>
-    <li><strong>Vendors you order from</strong> see your name, mobile number, delivery address and orders with them.</li>
+    <li><strong>Vendors you order from</strong> see your name, mobile number, delivery address and map pin, and your orders with them. They also see a count of how many of your orders on Mandi 24x7 were delivered and not delivered, which helps them avoid false orders.</li>
     <li><strong>Buyers</strong> see a vendor’s shop name, market and rates.</li>
     <li><strong>Service providers</strong> who process data for us: our cloud server host in India, an SMS provider
-      for OTPs, and push-notification services (Expo, Google Firebase Cloud Messaging and Apple Push Notification service).</li>
+      for OTPs, and push-notification services (Expo, Google Firebase Cloud Messaging and Apple Push Notification service). When you open a map, your phone loads it from OpenFreeMap and the map code from unpkg, which receive your IP address and the map area shown; they do not receive your name, number or address.</li>
     <li><strong>Authorities</strong>, when the law requires it.</li>
   </ul>
   <p>We never sell your personal data.</p>
 
   <h2>4. How long we keep it</h2>
   <p>We keep your account data while your account is active. When you delete your account (see
-  <a href="/delete-account">Delete account</a>), we erase your name, mobile number, addresses, vendor documents,
+  <a href="/delete-account">Delete account</a>), we erase your name, mobile number, addresses and map pins, problem-report notes and photos, vendor documents,
   notification tokens and alerts. Order and older ledger records are kept without your name or number, for up to 8 years, because
   the other party and Indian tax and accounting laws need them. Technical logs are deleted within 90 days.</p>
 
