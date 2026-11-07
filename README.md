@@ -32,7 +32,7 @@ Old addresses such as `/terms.html` or `/terms.php` redirect (301) to these. `ww
 
 ## Day-to-day changes: `config.php`
 
-- **Google Play launch:** set `PLAY_STORE_LIVE = true`. All "Coming soon on Google Play" badges become "Get it on Google Play" links, and "Get the app" and "Open your shop" open the Play Store.
+- **Store links:** `PLAY_STORE_URL` and `APP_STORE_URL`. The badges use Google's and Apple's own artwork; do not redraw them.
 - **Legal details:** fill `BUSINESS_NAME`, `BUSINESS_ADDRESS`, `GRIEVANCE_OFFICER`, `SUPPORT_PHONE` and `COURT_CITY`. While a value is empty, the page shows it as a yellow `[placeholder]`.
 
 ## Real app screenshots

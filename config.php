@@ -3,11 +3,9 @@
  * Mandi 24x7 website settings: the only file you normally need to edit.
  */
 
-// ---- Google Play ----------------------------------------------------------
-// Set to true once the app is approved on Google Play. Every "Get it on Google Play"
-// button, the header "Get the app" button and the vendor "Open your shop" button switch over.
-const PLAY_STORE_LIVE = false;
-const PLAY_STORE_URL  = 'https://play.google.com/store/apps/details?id=com.mandi24x7.app';
+// ---- App stores -----------------------------------------------------------
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.mandi24x7.app';
+const APP_STORE_URL  = 'https://apps.apple.com/in/app/mandi-24x7/id6831307144';
 
 // ---- Site -----------------------------------------------------------------
 const SITE_URL      = 'https://mandi24x7.com';   // no trailing slash
@@ -40,25 +38,13 @@ function fill(string $value, string $placeholder): string
     return $value !== '' ? e($value) : '<mark>[' . e($placeholder) . ']</mark>';
 }
 
-/** Where "get the app" style buttons point: the Play Store when live, otherwise the download section. */
-function app_link(): string
+/** Both store badges. Apple and Google allow only their own artwork, so it loads from their servers. */
+function store_badges(): string
 {
-    return PLAY_STORE_LIVE ? PLAY_STORE_URL : '/#download';
-}
-
-/** The Google Play badge: a real link when live, a "coming soon" badge until then. */
-function play_badge(string $extraClass = ''): string
-{
-    $icon = '<svg class="play-ico" viewBox="0 0 24 26" aria-hidden="true" focusable="false">'
-        . '<path fill="#00d7fe" d="M1 1.2 13.6 13 1 24.8c-.4-.3-.6-.8-.6-1.4V2.6c0-.6.2-1.1.6-1.4Z"/>'
-        . '<path fill="#ffce00" d="m17.8 17.2-4.2-4.2 4.2-4.2 4.7 2.7c1.4.8 1.4 2.2 0 3l-4.7 2.7Z"/>'
-        . '<path fill="#ff3a44" d="M17.8 17.2 13.6 13 1 24.8c.5.5 1.2.5 2.1 0l14.7-7.6Z"/>'
-        . '<path fill="#00f076" d="M17.8 8.8 3.1 1.2C2.2.7 1.5.7 1 1.2L13.6 13l4.2-4.2Z"/></svg>';
-    $cls = trim('play-badge ' . $extraClass);
-    if (PLAY_STORE_LIVE) {
-        return '<a class="' . e($cls) . '" href="' . e(PLAY_STORE_URL) . '" rel="noopener">'
-            . $icon . '<span><small>GET IT ON</small>Google Play</span></a>';
-    }
-    return '<span class="' . e($cls . ' is-soon') . '" role="img" aria-label="Coming soon on Google Play">'
-        . $icon . '<span><small>Coming soon on</small>Google Play</span></span>';
+    return '<div class="store-badges">'
+        . '<a class="store-badge store-badge-play" href="' . e(PLAY_STORE_URL) . '" rel="noopener">'
+        . '<img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="184" height="71" alt="Get it on Google Play"></a>'
+        . '<a class="store-badge" href="' . e(APP_STORE_URL) . '" rel="noopener">'
+        . '<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83" width="144" height="48" alt="Download on the App Store"></a>'
+        . '</div>';
 }

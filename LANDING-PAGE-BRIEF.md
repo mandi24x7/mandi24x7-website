@@ -72,7 +72,7 @@ The app and the Play Store link to them, so never rename them:
 
 ## 5. Technical notes
 - Plain PHP + HTML/CSS is enough; mobile-first (most visitors are on phones), page under about 1.5 MB (use WebP images, lazy-load below the fold).
-- Play Store link (after approval): `https://play.google.com/store/apps/details?id=com.mandi24x7.app`; until then show "Coming soon on Google Play".
+- Play Store: `https://play.google.com/store/apps/details?id=com.mandi24x7.app`. App Store: `https://apps.apple.com/in/app/mandi-24x7/id6831307144`. Use each store's official badge.
 - Optional live touch: show a few of today's lowest rates from the public API later (ask the developer for an endpoint; currently rates need login).
 - HTTPS on (Hostinger free SSL); redirect `www` to root.
 - Fill the `[...]` placeholders in the legal pages before going live.

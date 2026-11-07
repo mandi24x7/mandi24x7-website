@@ -18,6 +18,7 @@
       <a href="mailto:<?= e(SUPPORT_EMAIL) ?>"><?= e(SUPPORT_EMAIL) ?></a>
     </nav>
     <p class="copy">© <?= date('Y') ?> Mandi 24x7, <?= e(CITY) ?></p>
+    <p class="copy marks">Google Play and the Google Play logo are trademarks of Google LLC. App Store is a service mark of Apple Inc.</p>
   </div>
 </footer>
 <?= $footExtra ?? '' ?>

@@ -69,7 +69,7 @@ $cssVersion  = @filemtime(__DIR__ . '/../style.css') ?: 1;
       <a href="/#faq">FAQ</a>
       <a href="/contact"<?= $path === '/contact' ? ' aria-current="page"' : '' ?>>Contact</a>
     </nav>
-    <a class="btn btn-sm" href="<?= e(app_link()) ?>"<?= PLAY_STORE_LIVE ? ' rel="noopener"' : '' ?>>Get the app</a>
+    <a class="btn btn-sm" href="/#download">Get the app</a>
   </div>
 </header>
 <main id="main">

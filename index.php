@@ -42,22 +42,16 @@ $ld = [
         ], $faqs),
     ],
 ];
-if (PLAY_STORE_LIVE) {
-    $ld[] = [
-        '@context' => 'https://schema.org',
-        '@type'    => 'MobileApplication',
-        'name'     => SITE_NAME,
-        'operatingSystem'     => 'ANDROID',
-        'applicationCategory' => 'ShoppingApplication',
-        'installUrl' => PLAY_STORE_URL,
-        'offers'     => ['@type' => 'Offer', 'price' => '0', 'priceCurrency' => 'INR'],
-    ];
-}
+$ld[] = [
+    '@context' => 'https://schema.org',
+    '@type'    => 'MobileApplication',
+    'name'     => SITE_NAME,
+    'operatingSystem'     => 'Android, iOS',
+    'applicationCategory' => 'ShoppingApplication',
+    'installUrl' => [PLAY_STORE_URL, APP_STORE_URL],
+    'offers'     => ['@type' => 'Offer', 'price' => '0', 'priceCurrency' => 'INR'],
+];
 $headExtra = '  <script type="application/ld+json">' . json_encode($ld, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) . '</script>' . "\n";
-
-$vendorHref = PLAY_STORE_LIVE
-    ? PLAY_STORE_URL
-    : 'mailto:' . SUPPORT_EMAIL . '?subject=' . rawurlencode('Open my shop on Mandi 24x7');
 
 $footExtra = '<script src="/assets/site.js?v=' . (@filemtime(__DIR__ . '/assets/site.js') ?: 1) . '" defer></script>';
 
@@ -73,7 +67,7 @@ require __DIR__ . '/includes/header.php';
       <p class="hindi" lang="hi">मंडी के सारे रेट, एक जगह</p>
       <p class="lead">Compare tomorrow’s fruit &amp; vegetable rates from every vendor in Roorkee. Order tonight, get it fresh tomorrow.</p>
       <div class="cta-row">
-        <?= play_badge() ?>
+        <?= store_badges() ?>
         <a class="btn btn-ghost" href="#vendors">For vendors <?= icon('arrow') ?></a>
       </div>
       <p class="fine"><?= icon('clock') ?>Order before 10 PM · home delivery or pickup tomorrow</p>
@@ -156,11 +150,8 @@ require __DIR__ . '/includes/header.php';
         <li><?= icon('percent') ?><span><b>Low commission</b> (from 1.5%, launch offer available)</span></li>
       </ul>
       <p class="cta-row">
-        <a class="btn btn-saffron" href="<?= e($vendorHref) ?>"<?= PLAY_STORE_LIVE ? ' rel="noopener"' : '' ?>>Open your shop <?= icon('arrow') ?></a>
+        <a class="btn btn-saffron" href="#download">Open your shop <?= icon('arrow') ?></a>
       </p>
-      <?php if (!PLAY_STORE_LIVE): ?>
-        <p class="fine">The app is coming soon on Google Play. Email us and we’ll set up your shop first.</p>
-      <?php endif; ?>
     </div>
 
     <div class="vendor-card card" aria-label="Example vendor packing list" role="img">
@@ -248,8 +239,8 @@ require __DIR__ . '/includes/header.php';
       </picture>
       <div class="final-copy">
         <h2>Tomorrow’s rates are already live</h2>
-        <p>Order before 10 PM tonight, get it fresh tomorrow.</p>
-        <?= play_badge('on-dark') ?>
+        <p>Order before 10 PM tonight, get it fresh tomorrow. Free on Android and iPhone.</p>
+        <?= store_badges() ?>
       </div>
     </div>
   </div>
