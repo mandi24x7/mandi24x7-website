@@ -9,7 +9,7 @@ require __DIR__ . '/includes/header.php';
 <div class="legal">
 <article>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 7 November 2026</p>
+  <p class="updated">Last updated: 10 November 2026</p>
 
   <p>Mandi 24x7 (“we”, “us”) runs the Mandi 24x7 mobile app and website, a marketplace where buyers compare the daily
   fruit and vegetable rates of vendors in their city, and order for next-day delivery or pickup. This policy explains what personal data we collect, why, and the choices you have. It is written to
@@ -51,7 +51,7 @@ require __DIR__ . '/includes/header.php';
     <li><strong>Vendors you order from</strong> see your name, mobile number, delivery address and map pin, and your orders with them. They also see a count of how many of your orders on Mandi 24x7 were delivered and not delivered, which helps them avoid false orders.</li>
     <li><strong>Buyers</strong> see a vendor’s shop name, market and rates, and the vendor’s UPI ID when they pay by UPI.</li>
     <li><strong>Service providers</strong> who process data for us: our cloud server host in India, an SMS provider
-      for OTPs, and push-notification services (Expo, Google Firebase Cloud Messaging and Apple Push Notification service). When you open a map, your phone loads it from OpenFreeMap and the map code from unpkg, and from Esri if you switch to satellite view; they receive your IP address and the map area shown; they do not receive your name, number or address.</li>
+      for OTPs, and push-notification services (Expo, Google Firebase Cloud Messaging and Apple Push Notification service). When you open a map, your phone loads it from Ola Maps or OpenFreeMap and the map code from unpkg, and from Esri if you switch to satellite view; they receive your IP address and the map area shown; they do not receive your name, number or address. When you search for a place, our server sends the words you typed and a nearby map point to Ola Maps; Ola does not receive your name or number.</li>
     <li><strong>Authorities</strong>, when the law requires it.</li>
   </ul>
   <p>We never sell your personal data.</p>
