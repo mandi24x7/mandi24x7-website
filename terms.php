@@ -9,7 +9,7 @@ require __DIR__ . '/includes/header.php';
 <div class="legal">
 <article>
   <h1>Terms of Use</h1>
-  <p class="updated">Last updated: 7 November 2026</p>
+  <p class="updated">Last updated: 10 November 2026</p>
 
   <p>These terms apply when you use the Mandi 24x7 app or website (the “service”), operated by
   <?= fill(BUSINESS_NAME, 'registered business name') ?> (“we”, “us”). By creating an account you agree to them.</p>
@@ -40,9 +40,9 @@ require __DIR__ . '/includes/header.php';
 
   <h2>3A. Checking items, returns and problems</h2>
   <ul>
-    <li>Please check your items when you get them, before you pay. If an item is bad or short, hand it back right there and the vendor removes it from your bill.</li>
-    <li>Because fresh produce spoils quickly, items are not picked up for return after you have accepted them.</li>
-    <li>If something is wrong after that, or you did not get your order, use “Report a problem” on the order in the app within 24 hours, with a photo if you can. The vendor and Mandi 24x7 will see it. The vendor replaces the items or refunds you directly. Nothing in these terms takes away your rights under consumer law.</li>
+    <li>Please check your items when you get them, before you give your delivery code and pay. If an item is bad or short, hand it back right there and the vendor removes it from your bill.</li>
+    <li>Giving the delivery code means you have accepted the items. Because fresh produce spoils quickly, fruit and vegetables are not returned or replaced after you have accepted them.</li>
+    <li>If you did not get your order, or you were billed for more than you got, use “Report a problem” on the order in the app within 24 hours, with a photo if you can. The vendor and Mandi 24x7 will see it, and the vendor corrects a billing mistake with you directly. For anything else, use Help in the app. Nothing in these terms takes away your rights under consumer law.</li>
   </ul>
 
   <h2>4. Payments</h2>
@@ -81,7 +81,7 @@ require __DIR__ . '/includes/header.php';
   terms are governed by the laws of India, and courts at <?= fill(COURT_CITY, 'Haridwar / Roorkee') ?>, Uttarakhand have jurisdiction.</p>
 
   <h2>10. Contact</h2>
-  <p>Email <a href="mailto:mandirke24x7@gmail.com">mandirke24x7@gmail.com</a>.</p>
+  <p>Use Help in the app, or email <a href="mailto:mandirke24x7@gmail.com">mandirke24x7@gmail.com</a>.</p>
 </article>
 </div>
 <?php require __DIR__ . '/includes/footer.php'; ?>
