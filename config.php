@@ -20,11 +20,26 @@ const BUSINESS_NAME     = 'Mandi 24x7';   // registered business name, e.g. 'Man
 const BUSINESS_ADDRESS  = 'Roorkee, District Haridwar, Uttarakhand 247667';   // full business address
 const GRIEVANCE_OFFICER = 'Chander Mohan Sharma';   // grievance officer's full name
 const SUPPORT_PHONE     = '+91 90451 09910';   // support phone / WhatsApp, e.g. '+91 98xxx xxxxx' (empty = the phone section is hidden)
+// WhatsApp number that vendor applications go to: country code + number, digits only ('' hides the button).
+const VENDOR_WHATSAPP   = '919045109910';
 const COURT_CITY        = 'Roorkee';   // court jurisdiction city in the Terms: 'Haridwar' or 'Roorkee'
 
 date_default_timezone_set('Asia/Kolkata');
 
 // ---- Helpers --------------------------------------------------------------
+
+/** Link that opens WhatsApp with a vendor application ready to fill in and send. */
+function vendor_apply_url(): string
+{
+    $text = "Hello Mandi 24x7, I want to sell on Mandi 24x7.
+"
+          . "Shop name: 
+Owner name: 
+Mandi / market: 
+City: 
+Mobile number for the app: ";
+    return 'https://wa.me/' . VENDOR_WHATSAPP . '?text=' . rawurlencode($text);
+}
 
 /** HTML-escape a string. */
 function e(string $s): string

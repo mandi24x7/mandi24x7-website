@@ -18,7 +18,7 @@ $faqs = [
     ['Which cities?',
      'Roorkee now, more soon.'],
     ['How do I become a vendor?',
-     'Install the app → Profile → Open a shop; we verify within a day.'],
+     'Send us a WhatsApp message from the “Sell on Mandi 24x7” button on this page with your shop name and mobile number. We check your details and open your shop; then you log in to the app with that number.'],
     ['How do I delete my account?',
      'In the app, or see <a href="/delete-account">/delete-account</a>.'],
 ];
@@ -203,8 +203,11 @@ require __DIR__ . '/includes/header.php';
         <li><?= icon('percent') ?><span><b>Low commission</b> (from 1.5%, launch offer available)</span></li>
       </ul>
       <p class="cta-row">
-        <a class="btn btn-saffron" href="#download">Open your shop <?= icon('arrow') ?></a>
+<?php if (VENDOR_WHATSAPP !== ''): ?>
+        <a class="btn btn-saffron" href="<?= e(vendor_apply_url()) ?>" target="_blank" rel="noopener">Sell on Mandi 24x7 · WhatsApp <?= icon('arrow') ?></a>
+<?php endif; ?>
       </p>
+      <p class="fine">Shops are opened by our team, not from the app. Send your shop name and mobile number on WhatsApp and we will set it up.</p>
     </div>
 
     <div class="vendor-card card" aria-label="Example vendor packing list" role="img">
