@@ -9,7 +9,7 @@ require __DIR__ . '/includes/header.php';
 <div class="legal">
 <article>
   <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: 10 November 2026</p>
+  <p class="updated">Last updated: 11 November 2026</p>
 
   <p>Mandi 24x7 (“we”, “us”) runs the Mandi 24x7 mobile app and website, a marketplace where buyers compare the daily
   fruit and vegetable rates of vendors in their city, and order for next-day delivery or pickup. This policy explains what personal data we collect, why, and the choices you have. It is written to
@@ -61,6 +61,9 @@ require __DIR__ . '/includes/header.php';
   <a href="/delete-account">Delete account</a>), we erase your name, mobile number, addresses and map pins, problem-report notes and photos, Help requests, vendor documents,
   notification tokens and alerts. Order and older ledger records are kept without your name or number, for up to 8 years, because
   the other party and Indian tax and accounting laws need them. Technical logs are deleted within 90 days.</p>
+  <p>With those records we also keep a one-way coded form of the deleted mobile number. It is not the number and cannot be
+  turned back into it. We use it for one thing only: if the same number signs up again, missed-delivery marks from the
+  last 30 days still count, so deleting an account does not wipe them.</p>
 
   <h2>5. Security</h2>
   <p>Data travels over encrypted connections (HTTPS) and is stored on access-controlled servers with daily backups.

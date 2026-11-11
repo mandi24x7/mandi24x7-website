@@ -37,7 +37,9 @@ require __DIR__ . '/includes/header.php';
   <div class="note">
     Past orders and older ledger entries stay with the other party (the vendor or buyer) <strong>without your name or
     number</strong>, for up to 8 years, because they need them for their accounts and Indian tax and accounting laws
-    require these records. Nothing else is kept.
+    require these records. With them we keep a one-way coded form of your deleted mobile number (not the number, and it
+    cannot be turned back into it), so that missed-delivery marks from the last 30 days still count if the same number
+    signs up again. Nothing else is kept.
   </div>
 
   <p>Questions? Write to <a href="mailto:mandirke24x7@gmail.com">mandirke24x7@gmail.com</a>. See also our
