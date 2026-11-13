@@ -17,7 +17,8 @@
       <a href="/contact">Contact</a>
       <a href="mailto:<?= e(SUPPORT_EMAIL) ?>"><?= e(SUPPORT_EMAIL) ?></a>
     </nav>
-    <p class="copy">© <?= date('Y') ?> Mandi 24x7, <?= e(CITY) ?></p>
+    <?php /* Required for DLT SMS approval — do not remove. */ ?>
+    <p class="copy">© <?= date('Y') ?> <?= e(SITE_NAME) ?> · a product of Uni Soft Corner</p>
     <p class="copy marks">Google Play and the Google Play logo are trademarks of Google LLC. App Store is a service mark of Apple Inc.</p>
   </div>
 </footer>
